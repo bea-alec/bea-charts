@@ -8,7 +8,7 @@
   <meta name="description" content="Homepage">
   <meta name="keywords" content="BEA, Bureau of Economic Analysis">
   <meta name="author" content="BEA Contractor">
-  <title>BEA-CHARTS</title>
+  <title>Line basic</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
@@ -23,14 +23,56 @@
   <script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
 
   <!-- 2. Add the JavaScript to initialize the chart on document ready -->
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".close").click(function() {
-        $("#myAlert").alert();
-      });
-    });
-  </script>
+<script>
+$(function () {
+  $('#container').highcharts({
+      title: {
+          text: 'Monthly Average Temperature',
+          x: -20 //center
+      },
+      subtitle: {
+          text: 'Source: WorldClimate.com',
+          x: -20
+      },
+      xAxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      yAxis: {
+          title: {
+              text: 'Temperature (°C)'
+          },
+          plotLines: [{
+              value: 0,
+              width: 1,
+              color: '#808080'
+          }]
+      },
+      tooltip: {
+          valueSuffix: '°C'
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle',
+          borderWidth: 0
+      },
+      series: [{
+          name: 'Tokyo',
+          data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+      }, {
+          name: 'New York',
+          data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+      }, {
+          name: 'Berlin',
+          data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+      }, {
+          name: 'London',
+          data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      }]
+  });
+});
+</script>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -49,21 +91,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>BEA Charts</h1>
-        <h2>Demo charts</h2>
-        <ul class="list-group">
-          <li class="list-group-item"><a href="trade.htm">U.S. International Trade in Goods and Services</a></li>
-          <li class="list-group-item"><a href="gdp.htm">Gross Domestic Product (GDP) for the U.S.</a></li>
-          <li class="list-group-item"><a href="pi.htm">Personal Income</a></li>
-          <li class="list-group-item"><a href="gdp-industry.htm">Quarterly GDP by Industry</a></li>
-        </ul>
-        <h2>Templates</h2>
-        <ul class="list-group">
-          <li class="list-group-item"><a href="template-basic-column.htm">Basic column</a></li>
-          <li class="list-group-item"><a href="template-line-basic.htm">Line basic</a></li>
-          <li class="list-group-item"><a href="template-time-data-with-irregular-intervals.htm">Time data with irregular intervals</a></li>
-          <li class="list-group-item"><a href="template-map-color-axis.htm">Map - color axis</a></li>
-          <li class="list-group-item"><a href="template-map-us-data-labels.htm">Map - U.S. with data labels
+        <h1><a href="index.htm">BEA-CHARTS</a> | Line basic</h1>
+        <p class="small">Release: MM/DD/YYYY</p>
+        <div id="container">
+        </div>
       </div>
     </div>
   </div>
