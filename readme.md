@@ -1,2 +1,2 @@
 # BEA-CHARTS
-Charting BEA.GOV release data using Highcharts
+Charting BEA.GOV release data using Highcharts and amCharts
