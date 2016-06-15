@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Homepage">
+  <meta name="keywords" content="BEA, Bureau of Economic Analysis">
+  <meta name="author" content="BEA Contractor">
+  <title>GDP by State (millions of current dollars)</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
+  <style>
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+      font-size: 11px;
+    }
+  </style>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- 1. Add these JavaScript inclusions in the head of your page -->
+  <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+  <!-- 2. Add the JavaScript to initialize the chart on document ready -->
+  <script>
+  var map = AmCharts.makeChart( "chartdiv", {
+  type: "map",
+  "theme": "light",
+
+  colorSteps: 10,
+
+  dataProvider: {
+    map: "usaLow",
+    areas: [
+  {
+    "id": "US-AL",
+    "value": 206341
+  },
+  {
+    "id": "US-AK",
+    "value": 51560
+  },
+  {
+    "id": "US-AZ",
+    "value": 294170
+  },
+  {
+    "id": "US-AR",
+    "value": 124792
+  },
+  {
+    "id": "US-CA",
+    "value": 2496710
+  },
+  {
+    "id": "US-CO",
+    "value": 318097
+  },
+  {
+    "id": "US-CT",
+    "value": 260643
+  },
+  {
+    "id": "US-DE",
+    "value": 68576
+  },
+  {
+    "id": "US-DC",
+    "value": 124216
+  },
+  {
+    "id": "US-FL",
+    "value": 902201
+  },
+  {
+    "id": "US-GA",
+    "value": 505199
+  },
+  {
+    "id": "US-HI",
+    "value": 80761
+  },
+  {
+    "id": "US-ID",
+    "value": 66081
+  },
+  {
+    "id": "US-IL",
+    "value": 784413
+  },
+  {
+    "id": "US-IN",
+    "value": 341201
+  },
+  {
+    "id": "US-IA",
+    "value": 174803
+  },
+  {
+    "id": "US-KS",
+    "value": 147832
+  },
+  {
+    "id": "US-KY",
+    "value": 197626
+  },
+  {
+    "id": "US-LA",
+    "value": 242211
+  },
+  {
+    "id": "US-ME",
+    "value": 57621
+  },
+  {
+    "id": "US-MD",
+    "value": 368401
+  },
+  {
+    "id": "US-MA",
+    "value": 481630
+  },
+  {
+    "id": "US-MI",
+    "value": 474698
+  },
+  {
+    "id": "US-MN",
+    "value": 336207
+  },
+  {
+    "id": "US-MS",
+    "value": 108433
+  },
+  {
+    "id": "US-MO",
+    "value": 297263
+  },
+  {
+    "id": "US-MT",
+    "value": 46108
+  },
+  {
+    "id": "US-NE",
+    "value": 114937
+  },
+  {
+    "id": "US-NV",
+    "value": 143609
+  },
+  {
+    "id": "US-NH",
+    "value": 74121
+  },
+  {
+    "id": "US-NJ",
+    "value": 577301
+  },
+  {
+    "id": "US-NM",
+    "value": 91851
+  },
+  {
+    "id": "US-NY",
+    "value": 1466458
+  },
+  {
+    "id": "US-NC",
+    "value": 508241
+  },
+  {
+    "id": "US-ND",
+    "value": 53908
+  },
+  {
+    "id": "US-OH",
+    "value": 616406
+  },
+  {
+    "id": "US-OK",
+    "value": 176833
+  },
+  {
+    "id": "US-OR",
+    "value": 218711
+  },
+  {
+    "id": "US-PA",
+    "value": 695889
+  },
+  {
+    "id": "US-RI",
+    "value": 57821
+  },
+  {
+    "id": "US-SC",
+    "value": 202276
+  },
+  {
+    "id": "US-SD",
+    "value": 47631
+  },
+  {
+    "id": "US-TN",
+    "value": 320792
+  },
+  {
+    "id": "US-TX",
+    "value": 1580641
+  },
+  {
+    "id": "US-UT",
+    "value": 149643
+  },
+  {
+    "id": "US-VT",
+    "value": 30988
+  },
+  {
+    "id": "US-VA",
+    "value": 488996
+  },
+  {
+    "id": "US-WA",
+    "value": 450575
+  },
+  {
+    "id": "US-WV",
+    "value": 73512
+  },
+  {
+    "id": "US-WI",
+    "value": 310624
+  },
+  {
+    "id": "US-WY",
+    "value": 37727
+  }
+]
+  },
+
+  areasSettings: {
+    autoZoom: true,
+    "balloonText": "[[title]]: <strong>[[value]]</strong>"
+  },
+
+  valueLegend: {
+    right: 10,
+    minValue: "little",
+    maxValue: "a lot!"
+  },
+
+  "export": {
+    "enabled": true
+  }
+
+} );
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><a href="../index.htm">BEA-CHARTS</a></h1>
+        <h2>GDP by State (millions of current dollars)
+        <small>Q4 2015</small></h2>
+        <p class="small">Release: 06/14/16</p>
+        <div id="chartdiv"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

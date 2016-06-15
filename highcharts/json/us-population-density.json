@@ -1,0 +1,206 @@
+callback([
+  {
+    "Value": 3,
+    "Code": "dc"
+  },
+  {
+    "Value": 3,
+    "Code": "in"
+  },
+  {
+    "Value": 2.9,
+    "Code": "oh"
+  },
+  {
+    "Value": 2.8,
+    "Code": "ut"
+  },
+  {
+    "Value": 2.8,
+    "Code": "co"
+  },
+  {
+    "Value": 2.7,
+    "Code": "fl"
+  },
+  {
+    "Value": 2.7,
+    "Code": "ky"
+  },
+  {
+    "Value": 2.7,
+    "Code": "ca"
+  },
+  {
+    "Value": 2.6,
+    "Code": "ma"
+  },
+  {
+    "Value": 2.6,
+    "Code": "mi"
+  },
+  {
+    "Value": 2.5,
+    "Code": "md"
+  },
+  {
+    "Value": 2.5,
+    "Code": "ga"
+  },
+  {
+    "Value": 2.5,
+    "Code": "nj"
+  },
+  {
+    "Value": 2.4,
+    "Code": "va"
+  },
+  {
+    "Value": 2.4,
+    "Code": "tn"
+  },
+  {
+    "Value": 2.3,
+    "Code": "az"
+  },
+  {
+    "Value": 2.3,
+    "Code": "sd"
+  },
+  {
+    "Value": 2.1,
+    "Code": "id"
+  },
+  {
+    "Value": 2,
+    "Code": "nd"
+  },
+  {
+    "Value": 1.9,
+    "Code": "mn"
+  },
+  {
+    "Value": 1.8,
+    "Code": "nc"
+  },
+  {
+    "Value": 1.8,
+    "Code": "mo"
+  },
+  {
+    "Value": 1.7,
+    "Code": "pa"
+  },
+  {
+    "Value": 1.7,
+    "Code": "ct"
+  },
+  {
+    "Value": 1.7,
+    "Code": "ri"
+  },
+  {
+    "Value": 1.7,
+    "Code": "ms"
+  },
+  {
+    "Value": 1.6,
+    "Code": "hi"
+  },
+  {
+    "Value": 1.6,
+    "Code": "ar"
+  },
+  {
+    "Value": 1.5,
+    "Code": "al"
+  },
+  {
+    "Value": 1.4,
+    "Code": "tx"
+  },
+  {
+    "Value": 1.4,
+    "Code": "vt"
+  },
+  {
+    "Value": 1.3,
+    "Code": "sc"
+  },
+  {
+    "Value": 1.3,
+    "Code": "me"
+  },
+  {
+    "Value": 1.3,
+    "Code": "wa"
+  },
+  {
+    "Value": 1.2,
+    "Code": "nh"
+  },
+  {
+    "Value": 0.9,
+    "Code": "de"
+  },
+  {
+    "Value": 0.4,
+    "Code": "wi"
+  },
+  {
+    "Value": 0.3,
+    "Code": "wv"
+  },
+  {
+    "Value": 0.1,
+    "Code": "or"
+  },
+  {
+    "Value": 0.1,
+    "Code": "nv"
+  },
+  {
+    "Value": 0.1,
+    "Code": "il"
+  },
+  {
+    "Value": 0,
+    "Code": "ny"
+  },
+  {
+    "Value": 0,
+    "Code": "la"
+  },
+  {
+    "Value": -0.4,
+    "Code": "ne"
+  },
+  {
+    "Value": -0.7,
+    "Code": "ks"
+  },
+  {
+    "Value": -1,
+    "Code": "mt"
+  },
+  {
+    "Value": -1.1,
+    "Code": "nm"
+  },
+  {
+    "Value": -1.3,
+    "Code": "ak"
+  },
+  {
+    "Value": -2.8,
+    "Code": "ok"
+  },
+  {
+    "Value": -2.9,
+    "Code": "ia"
+  },
+  {
+    "Value": -3.4,
+    "Code": "wy"
+  }
+]);

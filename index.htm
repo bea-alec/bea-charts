@@ -12,16 +12,36 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/u/bs-3.3.6/dt-1.10.12/datatables.min.css"/>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
-
+  
   <!-- 1. Add these JavaScript inclusions in the head of your page -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+ 
+  <script type="text/javascript" src="https://cdn.datatables.net/u/bs-3.3.6/dt-1.10.12/datatables.min.js"></script>
   <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
   <script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
-
+  
+  <script type="text/javascript">
+    $(function(){table = $('#table1').DataTable({
+            //"sScrollX": "99%",
+            //"sScrollY":240,
+            "bDestroy": true,
+            "bPaginate": true,
+            "bLengthChange": true,
+            "bFilter": true,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": false,
+            "iDisplayLength": 10,
+            "order": [[ 1, "desc" ]]
+      });
+      });
+  </script>
   <!-- 2. Add the JavaScript to initialize the chart on document ready -->
 
   <script type="text/javascript">
@@ -49,26 +69,85 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>BEA Charts</h1>
-        <h2>Demo charts</h2>
-        <ul class="list-group">
-          <li class="list-group-item"><a href="trade.htm">U.S. International Trade in Goods and Services</a></li>
-          <li class="list-group-item"><a href="gdp.htm">Gross Domestic Product (GDP) for the U.S.</a></li>
-          <li class="list-group-item"><a href="pi.htm">Personal Income</a></li>
-          <li class="list-group-item"><a href="gdp-industry.htm">Quarterly GDP by Industry</a></li>
-          <li class="list-group-item"><a href="gdp-by-state.htm">Quartery GDP by State</a></li>
-        </ul>
-        <h2>Templates</h2>
-        <ul class="list-group">
-          <li class="list-group-item"><a href="template-basic-column.htm">Basic column</a></li>
-          <li class="list-group-item"><a href="template-line-basic.htm">Line basic</a></li>
-          <li class="list-group-item"><a href="template-time-data-with-irregular-intervals.htm">Time data with irregular intervals</a></li>
-          <li class="list-group-item"><a href="template-map-color-axis.htm">Map - color axis</a></li>
-          <li class="list-group-item"><a href="template-map-us-data-labels.htm">Map - U.S. with data labels</a></li>
-          <li class="list-group-item"><a href="template-map-drilldown.htm">Map - U.S. with drilldown</a></li>
+        <h1>BEA-CHARTS <small>&#x1f3d6; &#x1f3a8; &#x1f4c8;</small></h1></h1>
       </div>
     </div>
   </div>
+
+  
+  <div class="container">
+    <div id="myAlert" class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+      This is a prototype under development. Use of this site is for development and testing purposes only.
+    </div>
+
+    <div class="jumbotron">
+      <h2>JavaScript Charts for BEA.GOV</h2>
+      <p>We are prototyping two solutions for creating charts in the new BEA prototype: <a href="http://www.highcharts.com/">HighCharts</a> and <a href="https://www.amcharts.com/">AMCharts</a>.</p>
+      <a class = "btn btn-primary">Get involved!</a>
+    </div>
+    <div class="row">
+      <div class="col-md-12"> 
+        <h2>Demo charts</h2>
+        <table class="table table-striped" id="table1">
+        <thead>     
+          <th>Chart</th>
+          <th>Directorate</th>
+          <th>Product</th>
+          <th>Date</th>
+        </thead>
+        <tbody>
+          <tr>
+            
+            <td><a href="merged/balance-on-goods-and-services-trade.htm">Balance on Goods and Services Trade</a></td>
+            <td>International</td>
+            <td>International Trade in Goods and Services</td>
+            <td>06/03/2016</td>
+          </tr>
+          <tr>
+            
+            
+            <td><a href="merged/q2q-growth-in-real-gdp.htm">Quarter-to-Quarter Growth in Real GDP</a></td>
+            <td>National</td>
+            <td>Gross Domestic Product</td>
+            <td>05/27/2016</td>
+          </tr>
+          <tr>
+            
+            
+            <td><a href="merged/real-dpi-real-pce.htm">Real Disposable Income and Real Consumer Spending</a></td>
+            <td>National</td>
+            <td>Personal Income and Outlays</td>
+            <td>05/31/2016</td>
+          </tr>
+          <tr>
+            <td><a href="merged/quarterly-gdp-by-industry.htm">Real GDP and Real Value Add by Sector</a></td>
+            <td>Industry</td>
+            <td>Quarterly GDP by Industry</td>
+            <td>04/19/2016</td>
+          </tr>
+          <tr>
+            <td><a href="merged/gdp-by-state.htm">Quarterly GDP by State (Millions of Dollars)</td>
+            <td>Regional</td>
+            <td>Quarterly GDP by State</td>
+            <td>06/14/2016</td>
+          </tr>
+          <tr>
+            <td><a href="merged/percent-change-in-real-gdp-by-state.htm">Percent Change in Real GDP by State, 2015:III-2015:IV, Seasonally Adjusted at Annual Rates</td>
+            <td>Regional</td>
+            <td>Quarterly GDP by State</td>
+            <td>06/14/2016</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script>
+  <script>
+    twemoji.parse(document.body);
+  </script>
+  <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
