@@ -12,14 +12,6 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
-  <!-- Custom Style for am-chart -->
-  <style>
-    #chartdiv {
-      width: 100%;
-      height: 500px;
-      font-size: 11px;
-    }
-  </style>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,15 +21,12 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
   <script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
-  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
   <!-- 2. Add the JavaScript to initialize the chart on document ready -->
   <!-- HighChart -->
   <script type="text/javascript">
     $(document).ready(function() {
-      $.get('../data/pi0416.csv', function(csv) {
+      $.get('../data/gdp1q16_2nd.csv', function(csv) {
         $('#container').highcharts({
           chart: {
             type: 'column',
@@ -47,115 +36,26 @@
             csv: csv,
             color: '#005189'
           },
-          plotOptions: {
-            column: {
-              minPointLength: 3
-            }
-          },
           credits: {
             enabled: false
           },
           title: {
-            text: 'Real Disposable Income and Real Consumer Spending'
+            text: 'Quarter-to-Quarter Growth in Real GDP'
           },
           legend: {
-            enabled: true
+            enabled: false
+          },
+          subtitle: {
+            text: 'Real GDP is measured at seasonally adjusted rates'
           },
           yAxis: {
             title: {
-              text: 'Percent Change (Monthly Rate)'
+              text: 'Percent'
             }
           }
         });
       });
     });
-  </script>
-
-  <!-- amChart -->
-  <script>
-  var chart = AmCharts.makeChart( "chartdiv", {
-    "type": "serial",
-    "theme": "light",
-    "dataProvider": [ {
-      "Period": "Q2 2012",
-      "Percent": 1.9
-    }, {
-      "Period": "Q3 2012",
-      "Percent": 0.5
-    }, {
-      "Period": "Q4 2012",
-      "Percent": 0.1
-    }, {
-      "Period": "Q1 2013",
-      "Percent": 1.9
-    }, {
-      "Period": "Q2 2013",
-      "Percent": 1.1
-    }, {
-      "Period": "Q3 2013",
-      "Percent": 3.0
-    }, {
-      "Period": "Q4 2013",
-      "Percent": 3.8
-    }, {
-      "Period": "Q1 2014",
-      "Percent": -0.9
-    }, {
-      "Period": "Q2 2014",
-      "Percent": 4.6
-    }, {
-      "Period": "Q3 2014",
-      "Percent": 4.3
-    }, {
-      "Period": "Q4 2014",
-      "Percent": 2.1
-    }, {
-      "Period": "Q1 2015",
-      "Percent": 0.6
-    }, {
-      "Period": "Q2 2015",
-      "Percent": 3.9
-    }, {
-      "Period": "Q3 2015",
-      "Percent": 2
-    }, {
-      "Period": "Q4 2015",
-      "Percent": 1.4
-    }, {
-      "Period": "Q1 2016",
-      "Percent": 0.8
-    }],
-    "valueAxes": [ {
-      "gridColor": "#FFFFFF",
-      "gridAlpha": 0.2,
-      "dashLength": 0
-    } ],
-    "gridAboveGraphs": true,
-    "startDuration": 1,
-    "graphs": [ {
-      "balloonText": "[[category]]: <b>[[value]]</b>",
-      "fillAlphas": 0.8,
-      "lineAlpha": 0.2,
-      "type": "column",
-      "valueField": "Percent"
-    } ],
-    "chartCursor": {
-      "categoryBalloonEnabled": false,
-      "cursorAlpha": 0,
-      "zoomable": false
-    },
-    "categoryField": "Period",
-    "categoryAxis": {
-      "gridPosition": "start",
-      "gridAlpha": 0,
-      "tickPosition": "start",
-      "tickLength": 20
-    },
-    "export": {
-      "enabled": true
-    }
-
-  } );
   </script>
   
   <!-- Bootstrap alert dismiss  -->
@@ -192,9 +92,6 @@
         <p><strong>Release: </strong>05/27/2016</p>
         <h3>HighCharts Demo</h3>
           <div id="container"></div>
-        <h3>amCharts Demo</h3>
-          <div id="chartdiv"></div>
-      </div>
     </div>
   </div>
 </body>

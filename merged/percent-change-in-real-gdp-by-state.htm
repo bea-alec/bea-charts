@@ -26,9 +26,6 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- 1. Add these JavaScript inclusions in the head of your page -->
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-  <script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
   <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
   <script src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
   <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
@@ -39,19 +36,19 @@
   var map = AmCharts.makeChart( "chartdiv", {
   type: "map",
   "theme": "light",
-
-  colorSteps: 10,
-
+  colorSteps: 5,
+  precision: 1,
+  
   dataProvider: {
     map: "usaLow",
     areas: [
   {
     "id": "US-DC",
-    "value": 3
+    "value": 3.0
   },
   {
     "id": "US-IN",
-    "value": 3
+    "value": 3.0
   },
   {
     "id": "US-OH",
@@ -227,7 +224,7 @@
   },
   {
     "id": "US-MT",
-    "value": -1
+    "value": -1.0
   },
   {
     "id": "US-NM",
@@ -254,30 +251,25 @@
 
   areasSettings: {
     autoZoom: true,
-    "balloonText": "[[title]]: <strong>[[value]]</strong>"
+    balloonText: "[[title]]: <strong>[[value]]</strong>",
+    colorSolid: "#005189",
+    selectedColor: "#dc5f13"
   },
 
   valueLegend: {
-    right: 10,
-    minValue: "little",
-    maxValue: "a lot!"
+    right: 5,
+    minValue: -3.4,
+    maxValue: 3.3,
+    borderColor: "#ededed"
   },
-
+  
   "export": {
     "enabled": true
   }
 
 } );
-  </script>
-  
-  <!-- Bootstrap alert dismiss  -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".close").click(function() {
-        $("#myAlert").alert();
-      });
-    });
-  </script>
+  </script>  
+
   
   <!-- GA -->
   <script>
@@ -298,11 +290,11 @@
     <div class="row">
       <div class="col-md-12">
         <h1><a href="../index.htm">BEA-CHARTS</a><h1>
-        <h2>Percent Change in Real GDP by State, 2015:III-2015:IV, Seasonally Adjusted at Annual Rates</h2>
+        <h2>Percent Change in Real GDP by State, 2015:III-2015:IV, <br>
+        Seasonally Adjusted at Annual Rates</h2>
         <p><strong>Directorate: </strong>Regional</p>
         <p><strong>Product: </strong>GDP by State</p>
         <p><strong>Release: </strong>06/14/2016</p>
-        <h3>HighCharts Demo</h3>
         <h3>amCharts Demo</h3>
         <div id="chartdiv"></div>
       </div>
