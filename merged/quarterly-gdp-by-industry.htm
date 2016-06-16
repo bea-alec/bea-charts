@@ -54,28 +54,7 @@
       });
     });
   </script>
-  
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".close").click(function() {
-        $("#myAlert").alert();
-      });
-    });
-  </script>
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-79004335-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-  <!-- amChart -->
-
-  
   <!-- Bootstrap alert dismiss  -->
   <script type="text/javascript">
     $(document).ready(function() {
@@ -84,7 +63,7 @@
       });
     });
   </script>
-  
+
   <!-- GA -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -94,7 +73,6 @@
 
     ga('create', 'UA-79004335-1', 'auto');
     ga('send', 'pageview');
-
   </script>
 
 </head>
@@ -103,7 +81,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1><a href="../index.htm">BEA-CHARTS</a><h1>
+        <h1><a href="../index.htm">BEA-CHARTS</a> <small>&#x1f3d6; &#x1f3a8; &#x1f4c8;</small></h1>
         <h2>Real GDP and Real Value Added by Sector</h2>
         <p><strong>Directorate: </strong>Industry</p>
         <p><strong>Product: </strong>GDP by Industry</p>
@@ -112,7 +90,18 @@
           <div id="container"></div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <p class="text-muted_">This is a prototype website under development. For official data from BEA, please visit <a href="http://www.bea.gov">BEA.GOV</a></p>
+      </div>
+    </div>
   </div>
+  <script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script>
+  <script>
+    twemoji.parse(document.body);
+  </script>
+  <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

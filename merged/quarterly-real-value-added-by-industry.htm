@@ -8,7 +8,7 @@
   <meta name="description" content="bea-charts">
   <meta name="keywords" content="BEA, Bureau of Economic Analysis">
   <meta name="author" content="BEA Contractor">
-  <title>Real Disposable Income and Real Consumer Spending</title>
+  <title>Real Value Added by Industry</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
@@ -26,7 +26,7 @@
   <!-- HighChart -->
   <script type="text/javascript">
     $(document).ready(function() {
-      $.get('../data/pi0416.csv', function(csv) {
+      $.get('../data/gdpind415-chart2.csv', function(csv) {
         $('#container').highcharts({
           chart: {
             type: 'column',
@@ -36,23 +36,18 @@
             csv: csv,
             color: '#005189'
           },
-          plotOptions: {
-            column: {
-              minPointLength: 3
-            }
-          },
           credits: {
             enabled: false
           },
           title: {
-            text: 'Real Disposable Income and Real Consumer Spending'
+            text: 'Real Value Added by Industry'
           },
           legend: {
             enabled: true
           },
           yAxis: {
             title: {
-              text: 'Percent Change (Monthly Rate)'
+              text: 'Percent change from preceeding period'
             }
           }
         });
@@ -88,10 +83,10 @@
     <div class="row">
       <div class="col-md-12">
         <h1><a href="../index.htm">BEA-CHARTS</a> <small>&#x1f3d6; &#x1f3a8; &#x1f4c8;</small></h1>
-        <h2>Real Disposable Income and Real Consumer Spending</h2>
-        <p><strong>Directorate: </strong>National</p>
-        <p><strong>Product: </strong>Personal Income and Outlays</p>
-        <p><strong>Release: </strong>05/31/16</p>
+        <h2>Real Value Added by Industry</h2>
+        <p><strong>Directorate: </strong>Industry</p>
+        <p><strong>Product: </strong>GDP by Industry</p>
+        <p><strong>Release: </strong>04/19/16</p>
         <h3>HighCharts Demo</h3>
           <div id="container"></div>
       </div>

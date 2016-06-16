@@ -32,244 +32,211 @@
 
   <!-- 2. Add the JavaScript to initialize the chart on document ready -->
   <script>
-  var map = AmCharts.makeChart( "chartdiv", {
-  type: "map",
-  "theme": "light",
-  thousandsSeparator: ",",
+    var map = AmCharts.makeChart("chartdiv", {
+      type: "map",
+      "theme": "light",
+      thousandsSeparator: ",",
 
-  colorSteps: 5,
+      colorSteps: 5,
 
-  dataProvider: {
-    map: "usaLow",
-    areas: [
-  {
-    "id": "US-AL",
-    "value": 206341
-  },
-  {
-    "id": "US-AK",
-    "value": 51560
-  },
-  {
-    "id": "US-AZ",
-    "value": 294170
-  },
-  {
-    "id": "US-AR",
-    "value": 124792
-  },
-  {
-    "id": "US-CA",
-    "value": 2496710
-  },
-  {
-    "id": "US-CO",
-    "value": 318097
-  },
-  {
-    "id": "US-CT",
-    "value": 260643
-  },
-  {
-    "id": "US-DE",
-    "value": 68576
-  },
-  {
-    "id": "US-DC",
-    "value": 124216
-  },
-  {
-    "id": "US-FL",
-    "value": 902201
-  },
-  {
-    "id": "US-GA",
-    "value": 505199
-  },
-  {
-    "id": "US-HI",
-    "value": 80761
-  },
-  {
-    "id": "US-ID",
-    "value": 66081
-  },
-  {
-    "id": "US-IL",
-    "value": 784413
-  },
-  {
-    "id": "US-IN",
-    "value": 341201
-  },
-  {
-    "id": "US-IA",
-    "value": 174803
-  },
-  {
-    "id": "US-KS",
-    "value": 147832
-  },
-  {
-    "id": "US-KY",
-    "value": 197626
-  },
-  {
-    "id": "US-LA",
-    "value": 242211
-  },
-  {
-    "id": "US-ME",
-    "value": 57621
-  },
-  {
-    "id": "US-MD",
-    "value": 368401
-  },
-  {
-    "id": "US-MA",
-    "value": 481630
-  },
-  {
-    "id": "US-MI",
-    "value": 474698
-  },
-  {
-    "id": "US-MN",
-    "value": 336207
-  },
-  {
-    "id": "US-MS",
-    "value": 108433
-  },
-  {
-    "id": "US-MO",
-    "value": 297263
-  },
-  {
-    "id": "US-MT",
-    "value": 46108
-  },
-  {
-    "id": "US-NE",
-    "value": 114937
-  },
-  {
-    "id": "US-NV",
-    "value": 143609
-  },
-  {
-    "id": "US-NH",
-    "value": 74121
-  },
-  {
-    "id": "US-NJ",
-    "value": 577301
-  },
-  {
-    "id": "US-NM",
-    "value": 91851
-  },
-  {
-    "id": "US-NY",
-    "value": 1466458
-  },
-  {
-    "id": "US-NC",
-    "value": 508241
-  },
-  {
-    "id": "US-ND",
-    "value": 53908
-  },
-  {
-    "id": "US-OH",
-    "value": 616406
-  },
-  {
-    "id": "US-OK",
-    "value": 176833
-  },
-  {
-    "id": "US-OR",
-    "value": 218711
-  },
-  {
-    "id": "US-PA",
-    "value": 695889
-  },
-  {
-    "id": "US-RI",
-    "value": 57821
-  },
-  {
-    "id": "US-SC",
-    "value": 202276
-  },
-  {
-    "id": "US-SD",
-    "value": 47631
-  },
-  {
-    "id": "US-TN",
-    "value": 320792
-  },
-  {
-    "id": "US-TX",
-    "value": 1580641
-  },
-  {
-    "id": "US-UT",
-    "value": 149643
-  },
-  {
-    "id": "US-VT",
-    "value": 30988
-  },
-  {
-    "id": "US-VA",
-    "value": 488996
-  },
-  {
-    "id": "US-WA",
-    "value": 450575
-  },
-  {
-    "id": "US-WV",
-    "value": 73512
-  },
-  {
-    "id": "US-WI",
-    "value": 310624
-  },
-  {
-    "id": "US-WY",
-    "value": 37727
-  }
-]
-  },
+      dataProvider: {
+        map: "usaLow",
+        areas: [{
+          "id": "US-AL",
+          "value": 206341
+        }, {
+          "id": "US-AK",
+          "value": 51560
+        }, {
+          "id": "US-AZ",
+          "value": 294170
+        }, {
+          "id": "US-AR",
+          "value": 124792
+        }, {
+          "id": "US-CA",
+          "value": 2496710
+        }, {
+          "id": "US-CO",
+          "value": 318097
+        }, {
+          "id": "US-CT",
+          "value": 260643
+        }, {
+          "id": "US-DE",
+          "value": 68576
+        }, {
+          "id": "US-DC",
+          "value": 124216
+        }, {
+          "id": "US-FL",
+          "value": 902201
+        }, {
+          "id": "US-GA",
+          "value": 505199
+        }, {
+          "id": "US-HI",
+          "value": 80761
+        }, {
+          "id": "US-ID",
+          "value": 66081
+        }, {
+          "id": "US-IL",
+          "value": 784413
+        }, {
+          "id": "US-IN",
+          "value": 341201
+        }, {
+          "id": "US-IA",
+          "value": 174803
+        }, {
+          "id": "US-KS",
+          "value": 147832
+        }, {
+          "id": "US-KY",
+          "value": 197626
+        }, {
+          "id": "US-LA",
+          "value": 242211
+        }, {
+          "id": "US-ME",
+          "value": 57621
+        }, {
+          "id": "US-MD",
+          "value": 368401
+        }, {
+          "id": "US-MA",
+          "value": 481630
+        }, {
+          "id": "US-MI",
+          "value": 474698
+        }, {
+          "id": "US-MN",
+          "value": 336207
+        }, {
+          "id": "US-MS",
+          "value": 108433
+        }, {
+          "id": "US-MO",
+          "value": 297263
+        }, {
+          "id": "US-MT",
+          "value": 46108
+        }, {
+          "id": "US-NE",
+          "value": 114937
+        }, {
+          "id": "US-NV",
+          "value": 143609
+        }, {
+          "id": "US-NH",
+          "value": 74121
+        }, {
+          "id": "US-NJ",
+          "value": 577301
+        }, {
+          "id": "US-NM",
+          "value": 91851
+        }, {
+          "id": "US-NY",
+          "value": 1466458
+        }, {
+          "id": "US-NC",
+          "value": 508241
+        }, {
+          "id": "US-ND",
+          "value": 53908
+        }, {
+          "id": "US-OH",
+          "value": 616406
+        }, {
+          "id": "US-OK",
+          "value": 176833
+        }, {
+          "id": "US-OR",
+          "value": 218711
+        }, {
+          "id": "US-PA",
+          "value": 695889
+        }, {
+          "id": "US-RI",
+          "value": 57821
+        }, {
+          "id": "US-SC",
+          "value": 202276
+        }, {
+          "id": "US-SD",
+          "value": 47631
+        }, {
+          "id": "US-TN",
+          "value": 320792
+        }, {
+          "id": "US-TX",
+          "value": 1580641
+        }, {
+          "id": "US-UT",
+          "value": 149643
+        }, {
+          "id": "US-VT",
+          "value": 30988
+        }, {
+          "id": "US-VA",
+          "value": 488996
+        }, {
+          "id": "US-WA",
+          "value": 450575
+        }, {
+          "id": "US-WV",
+          "value": 73512
+        }, {
+          "id": "US-WI",
+          "value": 310624
+        }, {
+          "id": "US-WY",
+          "value": 37727
+        }]
+      },
 
-  areasSettings: {
-    autoZoom: true,
-    "balloonText": "[[title]]: <strong>[[value]]</strong>",
-    colorSolid: "#005189",
-    selectedColor: "#dc5f13"
-  },
+      areasSettings: {
+        autoZoom: true,
+        "balloonText": "[[title]]: <strong>[[value]]</strong>",
+        colorSolid: "#005189",
+        selectedColor: "#dc5f13"
+      },
 
-  valueLegend: {
-    right: 5,
-    minValue: 30988,
-    maxValue: 2496710,
-    borderColor: "#ededed"
-  },
+      valueLegend: {
+        right: 5,
+        minValue: 30988,
+        maxValue: 2496710,
+        borderColor: "#ededed"
+      },
 
-  "export": {
-    "enabled": true
-  }
+      "export": {
+        "enabled": true
+      }
 
-} );
+    });
   </script>
 
+  <!-- Bootstrap alert dismiss  -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".close").click(function() {
+        $("#myAlert").alert();
+      });
+    });
+  </script>
+
+  <!-- GA -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79004335-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 
 </head>
 
@@ -277,7 +244,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1><a href="../index.htm">BEA-CHARTS</a><h1>
+        <h1><a href="../index.htm">BEA-CHARTS</a> <small>&#x1f3d6; &#x1f3a8; &#x1f4c8;</small></h1>
         <h2>GDP by State (millions of current dollars) Q4 2015</h2>
         <p><strong>Directorate: </strong>Regional</p>
         <p><strong>Product: </strong>GDP by State</p>
@@ -286,7 +253,18 @@
           <div id="chartdiv"></div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <p class="text-muted_">This is a prototype website under development. For official data from BEA, please visit <a href="http://www.bea.gov">BEA.GOV</a></p>
+      </div>
+    </div>
   </div>
+  <script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script>
+  <script>
+    twemoji.parse(document.body);
+  </script>
+  <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
