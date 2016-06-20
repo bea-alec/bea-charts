@@ -8,7 +8,7 @@
   <meta name="description" content="BEA-CHART">
   <meta name="keywords" content="BEA, Bureau of Economic Analysis">
   <meta name="author" content="BEA Contractor">
-  <title>U.S. Current-Account and Component Balances</title>
+  <title>Current Account Transactions</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
@@ -24,11 +24,11 @@
 
   <!-- 2. Add the JavaScript to initialize the charts on document ready -->
   <!-- HighChart -->
-  <script type="text/javascript">
-    $(function () {
+  <script>
+  $(function () {
     $('#container').highcharts({
         title: {
-            text: 'U.S. Current-Account and Component Balance',
+            text: 'Current-Account Transactions',
 
         },
         subtitle: {
@@ -62,29 +62,18 @@
             }
         },
         series: [{
-            type: "area",
-            name: 'Current Account Balance',
-            data: [-183087, -178243, -176913, -152547, -98232, -89031, -94131, -102630, -108212, -114037, -117844, -101868, -118240, -121031, -108409, -112675, -120294, -116808, -105423, -104003, -98980, -94833, -92725, -79883, -94654, -94060, -95619, -107726, -114549, -111904, -123106, -113406, -124671,]
+            type: "line",
+            name: 'Imports of goods and services and income payments',
+            data: [874925, 894507, 890644, 782665, 650334, 638130, 668684, 712799, 733019, 759027, 780675, 800038, 837317, 866570, 871492, 872546, 888892, 887090, 882426, 885183, 892601, 892899, 895414, 900312, 917648, 937626, 934560, 940983, 913733, 917315, 914985, 889625, 892889,]
             },{
             type: "line",
-            name: 'Goods',
-            data: [-216677, -220469, -219624, -175722, -123499, -111984, -129950, -144262, -152461, -165200, -168786, -162230, -181536, -186717, -183307, -189086, -193976, -187183, -177957, -182055, -178437, -177126, -177570, -169112, -185712, -191836, -184677, -189944, -193517, -190876, -189768, -188404, -186429,]
-            },{
-            type: "line",
-            name: 'Services',
-            data: [31126, 34120, 30175, 28346, 28728, 30540, 31403, 35250, 34507, 36446, 39411, 43656, 47217, 47838, 49345, 47620, 49205, 50498, 50416, 54278, 58827, 59394, 60500, 61647, 65199, 66002, 65262, 65531, 67003, 66848, 64157, 64195, 64557,]
-            },{
-            type: "line",
-            name: 'Primary Income',
-            data: [38670, 39734, 44041, 23701, 25319, 24366, 37922, 35977, 43785, 44232, 42828, 46816, 50302, 51219, 57613, 61827, 57962, 52765, 52954, 52112, 50239, 54783, 56761, 57187, 56746, 54623, 59325, 53310, 48351, 45071, 41848, 47115, 37498,]
-            },{
-            type: "line",
-            name: 'Secondary Income',
-            data: [-36206, -31628, -31505, -28872, -28780, -31954, -33506, -29595, -34043, -29515, -31296, -30110, -34223, -33371, -32060, -33036, -33485, -32888, -30836, -28338, -29609, -31885, -32416, -29605, -30887, -22849, -35529, -36623, -36386, -32947, -39343, -36312, -40297,]
+            name: 'Exports of goods and services and income receipts',
+            data: [691838, 716264, 713731, 630118, 552102, 549098, 574553, 610170, 624806, 644991, 662831, 698170, 719078, 745539, 763083, 759871, 768599, 770282, 777002, 781181, 793621, 798065, 802689, 820428, 822994, 843566, 838941, 833257, 799184, 805411, 791880, 776218, 768218,]
             }]
+      });
     });
-});
   </script>
+
 
   <!-- Bootstrap alert dismiss  -->
   <script type="text/javascript">
@@ -113,7 +102,7 @@
     <div class="row">
       <div class="col-md-12">
         <h1><a href="../index.htm">BEA-CHARTS</a> <small>&#x1f3d6; &#x1f3a8; &#x1f4c8;</small></h1>
-        <h2>U.S. Current-Account and Component Balances</h2>
+        <h2>Current-Account Transactions</h2>
         <p><strong>Directorate: </strong>International</p>
         <p><strong>Product: </strong>U.S. International Transactions</p>
         <p><strong>Release: </strong>06/16/2016</p>
