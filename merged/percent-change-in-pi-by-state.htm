@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="bea-charts">
+  <meta name="keywords" content="BEA, Bureau of Economic Analysis">
+  <meta name="author" content="BEA Contractor">
+  <title>Personal Income: Percent Change by State</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
+  <!-- Custom Style for am-chart -->
+  <style>
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+      font-size: 11px;
+    }
+  </style>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- 1. Add these JavaScript inclusions in the head of your page -->
+  <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+  <!-- 2. Add the JavaScript to initialize the chart on document ready -->
+  <!-- amChart -->
+  <script>
+    var map = AmCharts.makeChart("chartdiv", {
+      type: "map",
+      "theme": "light",
+      colorSteps: 5,
+      precision: 1,
+
+      dataProvider: {
+        map: "usaLow",
+        areas: [
+  {
+    "id": "US-AL",
+    "value": 1
+  },
+  {
+    "id": "US-AK",
+    "value": 0.6
+  },
+  {
+    "id": "US-AZ",
+    "value": 1.1
+  },
+  {
+    "id": "US-AR",
+    "value": 1.2
+  },
+  {
+    "id": "US-CA",
+    "value": 0.9
+  },
+  {
+    "id": "US-CO",
+    "value": 1.1
+  },
+  {
+    "id": "US-CT",
+    "value": 0.8
+  },
+  {
+    "id": "US-DE",
+    "value": 1
+  },
+  {
+    "id": "US-DC",
+    "value": 1
+  },
+  {
+    "id": "US-FL",
+    "value": 1.1
+  },
+  {
+    "id": "US-GA",
+    "value": 1.2
+  },
+  {
+    "id": "US-HI",
+    "value": 1.1
+  },
+  {
+    "id": "US-ID",
+    "value": 0.7
+  },
+  {
+    "id": "US-IL",
+    "value": 1
+  },
+  {
+    "id": "US-IN",
+    "value": 0.7
+  },
+  {
+    "id": "US-IA",
+    "value": 0.5
+  },
+  {
+    "id": "US-KS",
+    "value": 1
+  },
+  {
+    "id": "US-KY",
+    "value": 0.7
+  },
+  {
+    "id": "US-LA",
+    "value": 0.2
+  },
+  {
+    "id": "US-ME",
+    "value": 1.4
+  },
+  {
+    "id": "US-MD",
+    "value": 1.1
+  },
+  {
+    "id": "US-MA",
+    "value": 1.2
+  },
+  {
+    "id": "US-MI",
+    "value": 1.3
+  },
+  {
+    "id": "US-MN",
+    "value": 0.6
+  },
+  {
+    "id": "US-MS",
+    "value": 1.1
+  },
+  {
+    "id": "US-MO",
+    "value": 1.1
+  },
+  {
+    "id": "US-MT",
+    "value": 0.7
+  },
+  {
+    "id": "US-NE",
+    "value": 0.5
+  },
+  {
+    "id": "US-NV",
+    "value": 0.9
+  },
+  {
+    "id": "US-NH",
+    "value": 1.1
+  },
+  {
+    "id": "US-NJ",
+    "value": 0.9
+  },
+  {
+    "id": "US-NM",
+    "value": 0.8
+  },
+  {
+    "id": "US-NY",
+    "value": 0.8
+  },
+  {
+    "id": "US-NC",
+    "value": 1
+  },
+  {
+    "id": "US-ND",
+    "value": -1.3
+  },
+  {
+    "id": "US-OH",
+    "value": 0.9
+  },
+  {
+    "id": "US-OK",
+    "value": 0.6
+  },
+  {
+    "id": "US-OR",
+    "value": 1.2
+  },
+  {
+    "id": "US-PA",
+    "value": 1.2
+  },
+  {
+    "id": "US-RI",
+    "value": 1.1
+  },
+  {
+    "id": "US-SC",
+    "value": 1
+  },
+  {
+    "id": "US-SD",
+    "value": 0.3
+  },
+  {
+    "id": "US-TN",
+    "value": 0.9
+  },
+  {
+    "id": "US-TX",
+    "value": 0.8
+  },
+  {
+    "id": "US-UT",
+    "value": 1.3
+  },
+  {
+    "id": "US-VT",
+    "value": 1.2
+  },
+  {
+    "id": "US-VA",
+    "value": 1.1
+  },
+  {
+    "id": "US-WA",
+    "value": 1.5
+  },
+  {
+    "id": "US-WV",
+    "value": 0.5
+  },
+  {
+    "id": "US-WI",
+    "value": 0.9
+  },
+  {
+    "id": "US-WY",
+    "value": -0.3
+  }
+]
+      },
+
+      areasSettings: {
+        autoZoom: true,
+        balloonText: "[[title]]: <strong>[[value]]</strong>",
+        colorSolid: "#005189",
+        selectedColor: "#dc5f13"
+      },
+
+      valueLegend: {
+        right: 5,
+        minValue: -1.3,
+        maxValue: 1.5,
+        borderColor: "#ededed"
+      },
+
+      "export": {
+        "enabled": true
+      }
+
+    });
+  </script>
+
+  <!-- GA -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79004335-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><a href="../index.htm">BEA-CHARTS</a> <small>&#x1f3d6; &#x1f3a8; &#x1f4c8;</small></h1>
+        <h2>Personal Income: Percent Change by State, 2015:IV-2016:I, <br>
+        Seasonally Adjusted at Annual Rates</h2>
+        <p><strong>Directorate: </strong>Regional</p>
+        <p><strong>Product: </strong>State Personal Income</p>
+        <p><strong>Release: </strong>06/22/2016</p>
+        <h3>amCharts Demo</h3>
+        <div id="chartdiv"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <p class="text-muted_">This is a prototype website under development. For official data from BEA, please visit <a href="http://www.bea.gov">BEA.GOV</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script>
+  <script>
+    twemoji.parse(document.body);
+  </script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
