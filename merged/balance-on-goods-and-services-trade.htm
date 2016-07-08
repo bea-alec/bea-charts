@@ -24,19 +24,16 @@
 
   <!-- 2. Add the JavaScript to initialize the charts on document ready -->
   <!-- HighChart -->
+  <script src="../assets/js/bea-trade.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      $.get('../data/trad0416.csv', function(csv) {
+      $.get('../data/trad0516b.csv', function(csv) {
         $('#container').highcharts({
           chart: {
-            type: 'line',
-            spacingLeft: 0,
+            type: 'line'
           },
           data: {
             csv: csv
-          },
-          credits: {
-            enabled: false
           },
           title: {
             text: 'Balance on Goods and Services Trade'
@@ -50,13 +47,24 @@
           yAxis: {
             title: {
               text: '$ in Billions'
+            },
+            max: 0,
+            min: -80
+          },
+          tooltip: {
+            pointFormat: "Balance: ${point.y} (billion)"
+          },
+          credits: {
+            enabled: false,
+            text: 'Source: U.S. Bureau of Economic Analysis',
+            position: {
+              align: 'center',
             }
           }
         });
       });
     });
   </script>
-
   <!-- Bootstrap alert dismiss  -->
   <script type="text/javascript">
     $(document).ready(function() {
